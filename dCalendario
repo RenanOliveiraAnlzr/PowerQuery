@@ -12,3 +12,24 @@ let
     #"Texto em Maiúscula" = Table.TransformColumns(#"Nome do Dia Inserido",{{"Nome do Mês", Text.Upper, type text}, {"Nome do Dia", Text.Upper, type text}})
 in
     #"Texto em Maiúscula"
+    
+    "[
+            List.Dates=List.Dates, 
+            Date.From=Date.From, 
+            Date.AddDays=Date.AddDays, 
+            DateTime.LocalNow=DateTime.LocalNow, 
+            Table.FromList=Table.FromList, 
+            Splitter.SplitByNothing=Splitter.SplitByNothing, 
+            ExtraValues.Error=ExtraValues.Error, 
+            Table.TransformColumnTypes=Table.TransformColumnTypes, 
+            Table.RenameColumns=Table.RenameColumns, 
+            Table.AddColumn=Table.AddColumn,
+            Date.Year=Date.Year, 
+            Int64.Type=Int64.Type, 
+            Date.Month=Date.Month, 
+            Date.MonthName=Date.MonthName,
+            Date.WeekOfYear=Date.WeekOfYear, 
+            Date.DayOfWeekName=Date.DayOfWeekName, 
+            Table.TransformColumns=Table.TransformColumns, 
+            Text.Upper=Text.Upper
+        ]"

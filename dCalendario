@@ -13,7 +13,7 @@ let
 in
     #"Texto em Maiúscula"
     
-    "[
+    /*[
             List.Dates=List.Dates, 
             Date.From=Date.From, 
             Date.AddDays=Date.AddDays, 
@@ -32,4 +32,4 @@ in
             Date.DayOfWeekName=Date.DayOfWeekName, 
             Table.TransformColumns=Table.TransformColumns, 
             Text.Upper=Text.Upper
-        ]"
+        ]*/

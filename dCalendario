@@ -1,6 +1,6 @@
 (Inicio as number, Fim as number) =>
 let
-    Inicio = List.Dates(Date.From(Date.AddDays(DateTime.LocalNow(), Inicio)), Fim, #duration(1, 0, 0, 0)),
+    Inicio = List.Dates(Date.From(Date.AddDays(DateTime.LocalNow(), Inicio*-1)), Fim, #duration(1, 0, 0, 0)),
     #"Convertido para Tabela" = Table.FromList(Inicio, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
     #"Tipo Alterado" = Table.TransformColumnTypes(#"Convertido para Tabela",{{"Date", type date}}),
     #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Date", "Data"}}),
